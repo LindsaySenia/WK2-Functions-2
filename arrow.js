@@ -82,7 +82,16 @@ console.log(jsNinja())
 */
 
 //CODE HERE
+const compareNums = (num1, num2) => {
+  if (num1 > num2){
+    return num1
+  } else {
+    return num2
+  }
+}
 
+
+console.log(compareNums(4,4))
   
 ////////// PROBLEM 6 //////////
 
@@ -98,3 +107,7 @@ console.log(jsNinja())
 */
 
 //CODE HERE
+
+const bestMovie = movie => `${movie} is the best movie ever!`
+
+console.log(bestMovie('Sharknado'))

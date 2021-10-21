@@ -52,7 +52,7 @@ first(names, firstName => {
   console.log('The first name in names is ' + firstName)
 })
 
-
+separator()
 
 ////////// PROBLEM 3 //////////
 
@@ -63,16 +63,17 @@ first(names, firstName => {
 
 // CODE HERE
 
+const last = (arr, callback) => callback(arr[arr.length - 1])
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// last(names, lastName => {
-//   console.log('The last name in names is ' + lastName)
-// })
+last(names, lastName => {
+  console.log('The last name in names is ' + lastName)
+})
 
-
+separator()
 
 ////////// PROBLEM 4 //////////
 
@@ -85,18 +86,27 @@ first(names, firstName => {
 
 // CODE HERE 
 
+const contains = (arr, name, callback) => {
+  if (arr.includes(name) === true) {
+    callback(true)
+  } else {
+    callback(false)
+  }
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// contains(names, 'Colt', result => {
-//   if(result === true){
-//     console.log('Colt is in the array')
-//   } else {
-//     console.log('Colt is not in the array')
-//   }
-// })
+contains(names, 'Colt', result => {
+  if(result === true){
+    console.log('Colt is in the array')
+  } else {
+    console.log('Colt is not in the array')
+  }
+})
+
+separator()
 
 
 

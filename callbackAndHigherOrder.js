@@ -120,6 +120,18 @@ separator()
 
 // CODE HERE
 
+const uniq = (arr, callback) => {
+  for (let i = 0; i < arr.length; i++){
+      for (let j = 1; j < arr.length; j++){
+        if (arr[i] === arr[j]){
+          arr.splice(j, 1)
+          j--
+        }
+      }
+  }
+  callback(arr)
+}
+
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
   The callback function should take in one parameter called uniqArr.
@@ -129,8 +141,10 @@ separator()
 
 // CODE HERE
 
+uniq(names, uniqArr => console.log(`The new names array with all the duplicate items removed is ${uniqArr}`))
 
 
+separator()
 ////////// PROBLEM 6 //////////
 
 /* 
@@ -139,7 +153,7 @@ separator()
 */
 
 // CODE HERE 
-
+const each = (arr,cb) => arr.forEach((el, i) => cb(el, i))
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -150,6 +164,9 @@ separator()
 
 // CODE HERE
 
+each(names, (item, index) => console.log(`The item at index ${index} is ${item}`))
+
+each(names, (name, 1) => console.log(`The name at index ${index} is ${name}`)
 
 ////////// PROBLEM 7 //////////
 

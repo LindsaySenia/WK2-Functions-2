@@ -166,7 +166,7 @@ const each = (arr,cb) => arr.forEach((el, i) => cb(el, i))
 
 each(names, (item, index) => console.log(`The item at index ${index} is ${item}`))
 
-each(names, (name, 1) => console.log(`The name at index ${index} is ${name}`)
+// each(names, (name, 1) => console.log(`The name at index ${index} is ${name}`)
 
 ////////// PROBLEM 7 //////////
 
